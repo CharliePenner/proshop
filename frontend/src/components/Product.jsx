@@ -18,7 +18,8 @@ const Product = ({ product }) => {
             <Card.Text as='div'>
                 <Rating
                     value={product.rating}
-                    text={`${product.numReviews} reviews`} />
+                    text={`${product.numReviews} reviews`}
+                />
             </Card.Text>
 
             <Card.Text as="h3">
@@ -27,6 +28,6 @@ const Product = ({ product }) => {
         </Card.Body>
     </Card>
   )
-}
+};
 
 export default Product

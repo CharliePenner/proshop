@@ -26,6 +26,6 @@ const Rating = ({ value, text }) => {
         <span className="rating-text">{ text && text }</span>
     </div>
   )
-}
+};
 
 export default Rating
