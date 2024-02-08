@@ -9,6 +9,6 @@ const FormContainer = ({ children }) => {
         </Row>
     </Container>
   )
-}
+};
 
-export default FormContainer
+export default FormContainer;
