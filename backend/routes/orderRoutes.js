@@ -14,7 +14,7 @@ router.post('/', protect, addOrderItems);
 router.get('/', protect, admin, getOrders);
 
 router.get('/mine', protect, getMyOrders);
-router.get('/:id', protect, admin, getOrderByID);
+router.get('/:id', protect, getOrderByID);
 router.put('/:id/pay', protect, updateOrderToPaid);
 router.put('/:id/deliver', protect, admin, updateOrderToDelivered);
 
