@@ -25,7 +25,6 @@ const ProductEditScreen = () => {
   const {
     data: product,
     isLoading,
-    refetch,
     error
   } = useGetProductDetailsQuery(productId);
 
@@ -48,8 +47,6 @@ const ProductEditScreen = () => {
   }, [product]);
 
   const submitHandler = async (e) => {
-    console.log('submitHandler called.')
-    console.log('Name: ', name);
     e.preventDefault();
     const updatedProduct = {
         productId,
@@ -90,6 +87,8 @@ const ProductEditScreen = () => {
     </Link>
     <FormContainer>
         <h1>Edit Product</h1>
+
+        {loadingUpload && <Loader />}
         {loadingUpdate && <Loader />}
 
         {isLoading ? <Loader /> : error ? (
